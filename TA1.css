@@ -1,0 +1,118 @@
+:root {
+    --background-light: #f9f9f9;
+    --text-light: #333;
+    --background-dark: #222;
+    --text-dark: #f9f9f9;
+    --primary-color: #000;
+    --left-light: #f0f0f0;
+    --left-dark: #444;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.left, .right {
+    padding: 20px;
+}
+
+.left {
+    width: 35%;
+    background: var(--left-light);
+    border-radius: 10px 0 0 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.right {
+    width: 65%;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section-title {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin: 5px 0;
+}
+
+.theme-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.theme-dark .container {
+    background-color: #333;
+}
+
+.theme-dark .left {
+    background: var(--left-dark);
+    color: var(--text-dark);
+}
+
+.theme-dark .section-title {
+    background: #666;
+}
