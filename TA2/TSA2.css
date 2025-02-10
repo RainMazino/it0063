@@ -5,18 +5,27 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: #121212; 
 }
 
 .container {
     display: flex;
     width: 80%;
     height: 80vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 10vh;
 }
 
 .sidebar {
@@ -34,11 +43,21 @@ body {
     font-size: 16px;
     cursor: pointer;
     width: 150px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;
+    border-radius: 5px;
 }
+
+.day-btn:nth-child(1) { box-shadow: 0 0 9px #ff6666; } 
+.day-btn:nth-child(2) { box-shadow: 0 0 9px #ff9933; } 
+.day-btn:nth-child(3) { box-shadow: 0 0 9px #ffcc33; } 
+.day-btn:nth-child(4) { box-shadow: 0 0 9px #99cc33; } 
+.day-btn:nth-child(5) { box-shadow: 0 0 9px #339966; } 
+.day-btn:nth-child(6) { box-shadow: 0 0 9px #3399ff; } 
+.day-btn:nth-child(7) { box-shadow: 0 0 9px #9933cc; } 
 
 .day-btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 25px rgb(146, 145, 145), 0 0 30px currentColor; 
 }
 
 .main-content {
