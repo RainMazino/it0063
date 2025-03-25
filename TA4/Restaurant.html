@@ -5,177 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders&display=swap');
-
-        body {
-            background: url('Restaurant.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        .title, .subtitle, p {
-            font-family: "Big Shoulders", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 700;
-            font-style: normal;
-            color: white;
-        }
-
-        .card {
-            min-height: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-            background: rgba(30, 30, 30, 0.8);
-            color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            position: relative;
-            margin-bottom: 20px;
-            margin-right: 15px;
-            margin-left: 15px;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            object-fit: cover;
-            height: 320px;
-            width: 100%;
-        }
-
-        .card-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-            transition: opacity 0.3s ease;
-            background: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-        }
-
-        .card:hover .card-body {
-            opacity: 1;
-        }
-
-        .card-title {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            padding: 5px 10px;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .popup-card {
-            position: fixed;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, 0%) scale(0.8);
-            background: rgba(40, 40, 40, 0.95);
-            color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            width: 90%; 
-            max-width: 700px; 
-            z-index: 1000;
-            opacity: 0; 
-            visibility: hidden;
-            transition: top 0.3s ease-out, opacity 0.4s ease-out, transform 0.4s ease-out;
-        }
-
-        .popup-card.show {
-            top: 65%;
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1; 
-            visibility: visible;
-        }
-
-       
-        .popup-card img {
-            width: 100%;
-            height: auto;
-            max-height: 300px; 
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .close-btn {
-            cursor: pointer;
-            font-size: 24px;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="Restaurant.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Restaurant Guide</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+        <!-- Navigation bar content -->
     </nav>
-    <div class="container text-center mt-4">
-        <h1 class="title">BEST of MERIDDEN</h1>
-        <h2 class="subtitle">RESTAURANT GUIDE</h2>
-        <p>PRODUCED BY: LOCAL MAGAZINE</p>
-        
+
+    <div class="container">
+        <h1 class="title">Restaurant Guide</h1>
+        <p class="subtitle">Discover the best restaurants around the world</p>
+
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card" onclick="showPopup('adobo')">
-                    <h5 class="card-title">ADOBO</h5>
-                    <img src="adobo.jpg" class="card-img-top" alt="Adobo">
-                    <div class="card-body text-center">
-                        <p>A classic Filipino dish with rich flavors.</p>
+                    <img src="adobo.jpg" alt="Adobo">
+                    <div class="card-body">
+                        <h5 class="card-title">ADOBO</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+
+            <div class="col-md-4">
                 <div class="card" onclick="showPopup('kaiseki')">
-                    <h5 class="card-title">KAISEKI</h5>
-                    <img src="kaiseki.jpg" class="card-img-top" alt="Kaiseki">
-                    <div class="card-body text-center">
-                        <p>A traditional multi-course Japanese meal.</p>
+                    <img src="kaiseki.jpg" alt="Kaiseki">
+                    <div class="card-body">
+                        <h5 class="card-title">KAISEKI</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+
+            <div class="col-md-4">
                 <div class="card" onclick="showPopup('beefwellington')">
-                    <h5 class="card-title">BEEF WELLINGTON</h5>
-                    <img src="beef wellington.jpg" class="card-img-top" alt="Beef Wellington">
-                    <div class="card-body text-center">
-                        <p>A luxurious dish wrapped in flaky pastry.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" onclick="showPopup('temanalamb')">
-                    <h5 class="card-title">TEMANA LAMB</h5>
-                    <img src="temanalamb.jpg" class="card-img-top" alt="Temana Lamb">
-                    <div class="card-body text-center">
-                        <p>A premium lamb dish with exquisite taste.</p>
+                    <img src="beef wellington.jpg" alt="Beef Wellington">
+                    <div class="card-body">
+                        <h5 class="card-title">BEEF WELLINGTON</h5>
                     </div>
                 </div>
             </div>
@@ -183,34 +47,13 @@
     </div>
 
     <div id="popup" class="popup-card">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h5 id="popup-title"></h5>
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2 id="popup-title"></h2>
         <p id="popup-description"></p>
         <p id="popup-info"></p>
         <img id="popup-image" src="" alt="Restaurant Image">
     </div>
-    
-    <script>
-        function showPopup(dish) {
-            const data = {
-                'adobo': {title: 'ADOBO', desc: 'A classic Filipino dish with rich flavors.', img: 'adobo.jpg', info: 'Address: Manila, Philippines\nCategory: Filipino\nOpen Time: 10 AM - 9 PM\nPrice: 350 PHP'},
-                'kaiseki': {title: 'KAISEKI', desc: 'A traditional multi-course Japanese meal.', img: 'kaiseki.jpg', info: 'Address: Kyoto, Japan\nCategory: Japanese\nOpen Time: 11 AM - 10 PM\nPrice: 5000 PHP'},
-                'beefwellington': {title: 'BEEF WELLINGTON', desc: 'A luxurious dish wrapped in flaky pastry.', img: 'beef wellington.jpg', info: 'Address: London, UK\nCategory: United Kingdom\nOpen Time: 12 PM - 10 PM\nPrice: 2000 PHP'},
-                'temanalamb': {title: 'TEMANA LAMB', desc: 'A premium lamb dish with exquisite taste.', img: 'temanalamb.jpg', info: 'Address: Auckland, New Zealand\nCategory: New Zealand\nOpen Time: 10 AM - 8 PM\nPrice: 1800 PHP'}
-            };
-            document.getElementById('popup-title').innerText = data[dish].title;
-            document.getElementById('popup-description').innerText = data[dish].desc;
-            document.getElementById('popup-info').innerText = data[dish].info;
-            document.getElementById('popup-image').src = data[dish].img;
-            document.getElementById('popup').classList.add('show');
 
-            let popup = document.getElementById('popup');
-    popup.classList.add('show');
-        }
-
-        function closePopup() {
-            document.getElementById('popup').classList.remove('show');
-        }
-    </script>
+    <script src="Restaurant.js"></script>
 </body>
 </html>
