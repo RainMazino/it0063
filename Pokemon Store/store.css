@@ -1,4 +1,3 @@
-/* 1.css */
 body {
     background: url('Store Background\\background.png') no-repeat center center fixed;
     background-size: cover;
@@ -89,11 +88,11 @@ h1, h2, h3 {
     font-weight: 700 !important;
     padding: 8px 20px;
     border-radius: 25px;
-    width: 70% !important; /* Reduced from 90% */
-    max-width: 200px; /* Added for better control */
+    width: 70% !important; 
+    max-width: 200px; 
     margin: 10px auto 0 !important;
     transition: transform 0.2s;
-    display: block; /* Ensures width works properly */
+    display: block;
 }
 
 .featured-price-btn:hover {
@@ -114,7 +113,6 @@ p, button {
     color: #000;
 }
 
-/* Updated Card Styles */
 .floating-card {
     background: #f5f5f5; 
     border-radius: 10px;
@@ -178,7 +176,7 @@ p, button {
     object-fit: contain;
     display: block;
     margin: 0 auto 8px;
-    opacity: 1; /* Default visible */
+    opacity: 1; 
 }
 
 .number-badge {
@@ -198,17 +196,16 @@ p, button {
     text-align: center;
 }
 
-/* Specific card adjustments */
-.floating-card:nth-child(-n+2) .badges-container { /* Cards 1-2 */
+.floating-card:nth-child(-n+2) .badges-container { 
     justify-content: space-around;
     width: 80%;
 }
 
-.floating-card:nth-child(3) .badges-container { /* Card 3 */
+.floating-card:nth-child(3) .badges-container { 
     gap: 5px;
 }
 
-.floating-card:nth-child(n+4):nth-child(-n+5) .badges-container { /* Cards 4-5 */
+.floating-card:nth-child(n+4):nth-child(-n+5) .badges-container { 
     gap: 8px;
 }
 
@@ -255,7 +252,7 @@ p, button {
     padding: 8px 20px;
     border-radius: 25px;
     width: 90% !important;
-    margin-top: auto !important; /* Pushes button to bottom */
+    margin-top: auto !important; 
     margin-left: auto !important;
     margin-right: auto !important;
     transition: transform 0.2s;
@@ -271,18 +268,17 @@ p, button {
     flex: 3;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center alignment for desktop */
+    align-items: center; 
 }
 
 .card-bottom {
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 180px; /* Adjust based on your needs */
+    min-height: 180px; 
     padding: 20px !important;
 }
 
-/* Title and Subtitle Alignment */
 .card-bottom h5 {
     display: -webkit-box;
     display: -moz-box;
@@ -291,15 +287,12 @@ p, button {
     overflow: hidden;
     text-overflow: ellipsis;
     
-    /* Standard property */
     line-clamp: 2;
     
-    /* Vendor prefixes */
     -webkit-line-clamp: 2;
     -moz-line-clamp: 2;
 }
 
-/* Specific styles for titles */
 .card-bottom h5 {
     font-size: 1rem;
     line-height: 1.3;
@@ -307,7 +300,6 @@ p, button {
     min-height: 40px;
 }
 
-/* Specific styles for subtitles */
 .card-bottom p {
     font-size: 0.85rem;
     margin-bottom: 15px !important;
@@ -336,12 +328,10 @@ p, button {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect */
 .bundle-item-img:hover {
     transform: scale(1.05);
 }
 
-/* Adjust existing bundles-card */
 .bundles-card {
     max-width: 900px;
     display: flex;
@@ -383,7 +373,7 @@ p, button {
         justify-content: center;
         padding-right: 0;
     }
-    /* ========= */
+
     .featured-badge-img {
         width: 40px;
         height: 20px;
@@ -393,14 +383,39 @@ p, button {
         font-size: 0.65rem;
     }
 
+    .timer-badge {
+        font-size: 0.65rem !important;
+        padding: 3px 8px !important;
+        top: -8px !important;
+        left: -8px !important;
+    }
+
+    /* Purchase Limit Badge Mobile Styles */
+    .purchase-limit-badge {
+        font-size: 0.65rem !important;
+        padding: 3px 8px !important;
+        top: -8px !important;
+        right: -8px !important;
+    }
+
+    /* Popular Badge Mobile Styles */
+    .popular-badge {
+        font-size: 0.7rem !important;
+        padding: 3px 10px !important;
+        top: -8px !important;
+        width: max-content;
+        white-space: nowrap;
+    }
+    
     .floating-card {
-        flex-direction: row; /* Changed from row-reverse */
-        align-items: flex-start; /* Align items to top */
+        flex-direction: row; 
+        align-items: flex-start; 
     }
     
     .floating-card .card-top {
-        align-items: flex-start; /* Left-align for mobile */
+        align-items: flex-start; 
         padding-right: 0 !important;
+        padding-top: 35px !important;
     }
     
     .floating-card .card-bottom {
@@ -409,7 +424,7 @@ p, button {
     }
     
     .floating-card img {
-        margin-left: 10px; /* Add spacing between image and text */
+        margin-left: 10px; 
     }
     
     .bundles-card {
