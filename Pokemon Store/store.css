@@ -384,21 +384,19 @@ p, button {
     }
 
     .timer-badge {
-        font-size: 0.65rem !important;
+        font-size: 0.60rem !important;
         padding: 3px 8px !important;
         top: -8px !important;
         left: -8px !important;
     }
 
-    /* Purchase Limit Badge Mobile Styles */
     .purchase-limit-badge {
-        font-size: 0.65rem !important;
+        font-size: 0.60rem !important;
         padding: 3px 8px !important;
         top: -8px !important;
         right: -8px !important;
     }
 
-    /* Popular Badge Mobile Styles */
     .popular-badge {
         font-size: 0.7rem !important;
         padding: 3px 10px !important;
